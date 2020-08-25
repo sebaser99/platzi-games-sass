@@ -31,7 +31,7 @@ main {
 .perfil {
   width: 50%;
   padding-top: 50px;
-  background-color: #8841da;
+  background-color: #333333;
   color: #FFFFFF;
 }
 .perfil__avatar {
@@ -49,7 +49,7 @@ main {
   text-align: center;
   font-weight: 700;
   font-size: 12px;
-  color: rgba(51, 51, 51, 0.5);
+  color: rgba(136, 65, 218, 0.7);
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
@@ -82,7 +82,7 @@ main {
   justify-content: space-around;
   border-radius: 20px;
   box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.5);
-  color: #333333;
+  color: #8841da;
   background-color: #FFFFFF;
 }
 .estadistica--perfil h3 {
@@ -106,7 +106,7 @@ main {
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.5);
-  color: #333333;
+  color: #8841da;
   background-color: #FFFFFF;
 }
 .ubicacion--perfil i {
@@ -137,7 +137,7 @@ main {
   justify-content: space-evenly;
   border-radius: 20px;
   box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.5);
-  color: #333333;
+  color: #8841da;
   background-color: #FFFFFF;
 }
 .galeria__foto-principal {
@@ -160,16 +160,18 @@ main {
 .articulos {
   width: 40%;
   padding: 50px 0 0 50px;
+  background-color: #8841da;
+  color: #FFFFFF;
 }
 
 .articulo {
   margin-bottom: 75px;
-  border-bottom: 3px solid #8841da;
+  border-bottom: 3px solid #3f579a;
 }
 .articulo__categoria {
   font-weight: 500;
   font-size: 16px;
-  color: #8841da;
+  color: #333333;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }

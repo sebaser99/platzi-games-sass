@@ -1,7 +1,7 @@
 .perfil {
 	width: 50%;
 	padding-top: 50px;
-	background-color: $color-secundario;
+	background-color: $color-primario;
 	color: $color-claro;
 	
 	&__avatar {
@@ -18,7 +18,7 @@
 		text-align: center;
 		font-weight: 700;
     font-size: 12px;
-    color: get-opacity($color-primario, .50);
+    color: get-opacity($color-secundario, .70);
     @include titulos($fuente2);
   }
 	&__boton {
