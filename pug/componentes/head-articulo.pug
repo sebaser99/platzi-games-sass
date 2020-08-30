@@ -1,12 +1,11 @@
-mixin stats(valor,leyenda)
-	.estadistica_elemento
-		h3=valor
-		span=leyenda
-mixin article(categoria,titulo, descripcion)
-	.articulo
-		span.articulo__categoria=categoria
-		h2.articulo__titulo=titulo
-		p.articulo__descripcion=descripcion
+mixin caja(imagen, categoria, titulo, contenido)
+	.caja
+		.caja__imagen: img(src="../images/"+imagen)
+		.caja__contenido
+			span.caja__categoria=categoria
+			h3=titulo
+			p=contenido
+			a Leer Mas
 doctype html
 html
 	head
@@ -15,6 +14,9 @@ html
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, maximum-scale=1.0, user-scalable=no')
 		link(rel="stylesheet",href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Oswald:400,500,600,700&display=swap" )
-		link(rel='stylesheet', href='../css/ejercicio-sass.css')
+		link(rel='stylesheet', href='../css/platzigames.css')
 		script(src='https://kit.fontawesome.com/552ebddad2.js')
 	body
+		include header.pug
+		block contenidos-articulo
+		include footer.pug

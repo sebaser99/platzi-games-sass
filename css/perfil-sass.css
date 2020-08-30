@@ -31,7 +31,7 @@ main {
 .perfil {
   width: 50%;
   padding-top: 50px;
-  background-color: #333333;
+  background-color: #8841da;
   color: #FFFFFF;
 }
 .perfil__avatar {
@@ -49,7 +49,7 @@ main {
   text-align: center;
   font-weight: 700;
   font-size: 12px;
-  color: rgba(136, 65, 218, 0.7);
+  color: rgba(51, 51, 51, 0.7);
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
@@ -160,8 +160,8 @@ main {
 .articulos {
   width: 40%;
   padding: 50px 0 0 50px;
-  background-color: #8841da;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #333333;
 }
 
 .articulo {
@@ -171,7 +171,7 @@ main {
 .articulo__categoria {
   font-weight: 500;
   font-size: 16px;
-  color: #333333;
+  color: #8841da;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
