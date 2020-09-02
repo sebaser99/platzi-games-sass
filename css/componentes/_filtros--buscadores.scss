@@ -1,0 +1,23 @@
+.encabezado--con-filtros
+	contenedor()
+	padding: 30px 100px
+
+	h2
+		margin-top: 10px
+		font-weight: 500
+		font-size: 50px
+		titulos(Fuente2)
+		
+		
+	.filtros
+		width: 250px
+		height: 75px
+		padding: 20px
+		margin-left: auto
+		caja-sombra()
+		span 
+			titulos(Fuente2)
+		a
+			margin-left: 20px
+			font-size: 25px	
+			color: color-primario

@@ -184,3 +184,11 @@ main {
   margin-bottom: 30px;
   padding-right: 10pxs;
 }
+
+.header--principal {
+  display: flex;
+}
+
+.footer--principal {
+  display: flex;
+}

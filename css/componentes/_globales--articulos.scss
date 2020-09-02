@@ -13,11 +13,16 @@ $Fuente-base: 18px;
 @mixin Oswald{
 	font-family: $Fuente2;
 	text-transform: uppercase;
-	font-weight: 700;
+    font-weight: 700;
 }
-@function fuente($font-size){
-	font-size: $font-size;
-	line-height: $font-size + 10%;
+@mixin fuente($fuente1){
+    font-size: $fuente1;
+}
+@function salto-delinea($font-size1){
+    @return $font-size1 + 10;
+}
+@function get-opacity($color, $nivel){
+	@return rgba($color, $nivel);
 }
 
 *{
@@ -27,13 +32,16 @@ $Fuente-base: 18px;
 body{
   margin: 0;
 	font-family: $Fuente1;
-	color: $color-primario;
-  .fuente($Fuente-base);
+    color: $color-primario;
+    @include fuente($Fuente-base);
+    line-height: salto-delinea($Fuente-base);
+
+   
     
 }
 
 h1, h2, h3{
   margin: 0;
-  .Oswald;
+  @include Oswald;
    
 }

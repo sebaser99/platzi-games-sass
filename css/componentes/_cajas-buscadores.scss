@@ -1,0 +1,24 @@
+
+.contenido{ 
+	margin-bottom: 40px;
+	justify-content: space-evenly;	
+	flex-wrap: wrap;
+	contenedor();
+}
+.caja{ 
+	max-width: 430px;
+	img{ 
+		width: 430px;
+    }
+	&__contenido{ 
+		padding: 20px;
+		background-color: color-claro;
+		caja-sombra()
+		span{ 
+			color: color-secundario;
+			titulos(Fuente2);
+        }
+		h3{ 
+			titulos(Fuente2);
+        }
+    }

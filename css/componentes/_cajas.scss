@@ -9,20 +9,20 @@
 .caja{
 	max-width: 430px;
 	margin-bottom: 1em; 
-	.sombra-caja;
+	@include sombra-caja;
 	&__contenido{
 		padding: 25px;
-		background-color: @color-claro;
+		background-color: $color-claro;
 		
 	}
 	span{
-		color: @color-secundario;
-		.Oswald;
+		color: $color-secundario;
+		@include Oswald;
 	}
 	a{
 		text-decoration: none;
-		color: @color-variacion;
-		.Oswald;
+		color: $color-variacion;
+		@include Oswald;
 	}
 
 }
