@@ -1,45 +1,64 @@
-Fuente1= 'Lato', sans-serif;
-Fuente2= 'Oswald', sans-serif;
-color-primario= #333333;
-color-secundario= #8841da;
-color-claro= #ffffff;
+$fuente1: 'Lato', sans-serif;
+$fuente2: 'Oswald', sans-serif;
+$color-primario: #333333;
+$color-secundario: #8841da;
+$color-claro: #ffffff;
+$color-variacion: #3f579a;
 
-contenedor()
-	width: 96%
-	display: flex
-	margin: 0 auto
-	padding: 30px 20px
+@mixin contenedor{
+	width: 96%;
+	display: flex;
+	margin: 0 auto;
+	padding: 30px 10px;
+}
+	
 
-caja-sombra()
-	background: color-claro
-	box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.20)
+@mixin caja-sombra{
+	background: $color-claro;
+	box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.20);
+	
+}
 
-bordes-estadistica()
-	border-top: 1px solid opacidad(color-primario, .20)
-	border-bottom: 1px solid opacidad(color-primario, .20)
-	margin-bottom: 60px
-	padding-bottom: 0px
-for header in 3 2 1
-	h{header}
-		font-size: 35px - (5*header)
-		margin: 0
+@mixin bordes-estadistica{
+	border-top: 1px solid opacidad($color-primario, .20);
+	border-bottom: 1px solid opacidad($color-primario, .20);
+	margin-bottom: 60px;
+	padding-bottom: 0px;
 
-titulos(fuente)
-	if fuente==Fuente1
-		font-family: Fuente1
-	else 
-		font-family: Fuente2
-		font-weight: 600
-		text-transform: uppercase
+}
+@for $header from 1 through 3{
+	h#{$header} {
+		font-size: 35px - (5*$header);
+		margin: 0;
 
-opacidad(color, cantidad)
-	alpha(color, cantidad)
+	}
+
+}
+
+@mixin titulos($fuente){
+	@if $fuente == $fuente1{
+		
+		font-family: $fuente1;
+	}
+	@else {
+		font-family: $fuente2;
+		font-weight: 600;
+		text-transform: uppercase;
+
+	}
+
+}
+
+@function opacidad($color, $cantidad){
+	@return rgba($color, $cantidad);
+}
 	
 *{ 
 	box-sizing: border-box;
 }
+
 body{ 
 	margin: 0;
-	color: color-primario;
-	titulos(Fuente1);
+	color: $color-primario;
+	@include titulos($fuente1);
 }

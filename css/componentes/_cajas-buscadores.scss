@@ -1,24 +1,25 @@
-
 .contenido{ 
-	margin-bottom: 40px;
 	justify-content: space-evenly;	
 	flex-wrap: wrap;
-	contenedor();
+	@include contenedor;
+	padding: 30px 0 0 0;
 }
 .caja{ 
-	max-width: 430px;
+	max-width: 400px;
 	img{ 
-		width: 430px;
+		width: 400px;
+		height: 250px;
     }
 	&__contenido{ 
 		padding: 20px;
-		background-color: color-claro;
-		caja-sombra()
+		background-color: $color-claro;
+		@include caja-sombra;
 		span{ 
-			color: color-secundario;
-			titulos(Fuente2);
+			color: $color-secundario;
+			@include titulos($fuente2);
         }
 		h3{ 
-			titulos(Fuente2);
+			@include titulos($fuente2);
         }
     }
+}
