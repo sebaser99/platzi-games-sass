@@ -22,7 +22,7 @@ $color-variacion: #3f579a;
 @mixin bordes-estadistica{
 	border-top: 1px solid opacidad($color-primario, .20);
 	border-bottom: 1px solid opacidad($color-primario, .20);
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 	padding-bottom: 0px;
 
 }

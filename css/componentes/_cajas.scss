@@ -26,3 +26,41 @@
 	}
 
 }
+
+.caja--con-fondo{
+	display: block;
+	box-shadow: none;
+	position: relative;
+	overflow-block: hidden;
+	background-color: $color-primario;
+	img{
+		display: block;
+		max-width: 100%;
+		max-height: auto;
+		position: absolute;
+		opacity: .5;
+		object-fit: contain;
+	}
+	&__contenido{
+		padding: 20px;
+		position: absolute;
+		text-align: center;
+		color: $color-claro;
+		p{
+			color: $color-claro;
+		}
+		h3{
+			color: $color-claro;
+		}
+	}
+	&__categoria{
+		display: block;
+		width: auto;
+		max-width: 100px;
+		margin: 0 auto;
+		text-align: center;
+		background-color: $color-secundario;
+		color: $color-claro;
+		@include titulos($fuente2);
+	}
+}
