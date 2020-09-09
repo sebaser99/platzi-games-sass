@@ -7,11 +7,10 @@
 }
 
 .caja{
-	max-width: 430px;
-	margin-bottom: 1em; 
+	max-width: 400px; 
 	@include sombra-caja;
 	&__contenido{
-		padding: 25px;
+		padding: 10px;
 		background-color: $color-claro;
 		
 	}
@@ -24,6 +23,10 @@
 		color: $color-variacion;
 		@include Oswald;
 	}
+	p{
+		height: 115px;
+	}
+
 
 }
 

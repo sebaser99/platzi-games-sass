@@ -4,6 +4,8 @@ $color-secundario: #8841da;
 $color-variacion: #3f579a;
 $fuente1: 'Lato', sans-serif;
 $fuente2: 'Oswald', sans-serif;
+$fuente-base: 18px;
+
 
 @mixin caja {
 	border-radius: 20px;
@@ -21,8 +23,19 @@ $fuente2: 'Oswald', sans-serif;
 	}
 }
 
-@function get-opacity($color, $nivel){
+@function opacidad($color, $nivel){
 	@return rgba($color, $nivel);
+}
+
+@function calculateRem($size){
+	$remsize: $size/ 16px;
+	@return $remsize * 1rem;
+}
+
+@mixin font-size($size){
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;
 }
 
 @each $header, $size in (h1: 30px, h2: 25px, h3: 20px){
@@ -32,13 +45,77 @@ $fuente2: 'Oswald', sans-serif;
 	}
 }
 
+@for $header from 1 through 3{
+	h#{$header} {
+		font-size: 35px - (5*$header);
+		margin: 0;
+
+	}
+
+}
+
+@mixin sombra-caja{
+	box-shadow: 0px 5px 15px 0px fade($color-primario, 50%);
+}
+
+@mixin Oswald{
+	font-family: $fuente2;
+	text-transform: uppercase;
+    font-weight: 700;
+}
+@mixin fuente($fuente){
+    font-size: $fuente;
+}
+@mixin titulos($fuente){
+	@if $fuente == $fuente1{
+		
+		font-family: $fuente1;
+	}
+	@else {
+		font-family: $fuente2;
+		font-weight: 600;
+		text-transform: uppercase;
+
+	}
+
+}
+
+@mixin contenedor{
+	width: 96%;
+	display: flex;
+	margin: 0 auto;
+	padding: 30px 10px;
+}
+
+
+@mixin caja-sombra{
+	background: $color-claro;
+	box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.20);
+	
+}
+
+@mixin bordes-estadistica{
+	border-top: 1px solid opacidad($color-primario, .20);
+	border-bottom: 1px solid opacidad($color-primario, .20);
+	margin-bottom: 40px;
+	padding-bottom: 0px;
+
+}
+
+@function salto-delinea($font-size1){
+    @return $font-size1 + 10;
+}
+
+
 *{
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-	font-family: $fuente1;
+    font-family: $fuente1;
+    color: $color-primario;
+    @include font-size(18px);
 }
 
 main {
@@ -46,3 +123,9 @@ main {
 	width: 100%;
 	height: 100%;
 }
+
+h1, h2, h3{
+    margin: 0;
+    @include Oswald;
+     
+  }

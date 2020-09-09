@@ -19,3 +19,28 @@
 		font-family: $fuente2;
 	}
 }
+
+.estadistica--articulos{
+	margin: 0;
+	height: 70px;
+	padding-top: 20px;
+
+	@include bordes-estadistica;
+	ul{
+		display: flex;
+		margin: 0;
+		padding: 0;
+		justify-content: space-evenly;
+		li{
+			list-style: none;
+			color: opacidad($color-primario, .30);
+		}
+		span{  
+			margin-left: 10px
+
+		} 
+
+	}
+
+}
+

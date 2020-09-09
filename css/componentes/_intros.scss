@@ -33,7 +33,7 @@
   &__categoria{
     
     @include Oswald;
-    color: get-opacity($color-claro, .50);
+    color: opacidad($color-claro, .50);
   }
 
   &__titulo{

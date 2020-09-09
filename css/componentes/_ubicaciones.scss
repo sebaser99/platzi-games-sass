@@ -21,6 +21,6 @@
 		text-transform: uppercase;
 		font-size: 12px;
 		font-family: $fuente2;
-		color: get-opacity($color-primario, .50);
+		color: opacidad($color-primario, .50);
 	}
 }
