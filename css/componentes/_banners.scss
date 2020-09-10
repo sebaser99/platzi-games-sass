@@ -1,0 +1,30 @@
+.banner--homepage{
+    max-width: 300px;
+    padding: 50px;
+    margin: 20px 0;
+    background-color: $color-secundario;
+    color: $color-claro;
+    h3{
+        margin: 20px 0;
+        @include font-size(20px);
+        @include titulos($fuente2);
+    }
+    p{
+        margin: 30px 0;
+    }
+    .button{
+        padding: 10px;
+        height: 50px;
+        width: 100px;
+        border: 2px solid $color-claro;
+        @include font-size(18px);
+        @include titulos($fuente2);
+    }
+    a{
+        display: block;
+        margin: 40px 0;
+        text-align: center;
+        
+    }
+
+}
