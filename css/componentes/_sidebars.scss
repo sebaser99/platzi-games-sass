@@ -1,10 +1,10 @@
 .sidebar--listado{
-    max-width: 300px;
-    padding: 90px 20px 20px 20px;
+    margin: 0 auto;
     @include caja();
     h3{
         @include font-size(20px);
         @include titulos($fuente2);
+        text-align: center;
 
     }
     ul{
@@ -27,4 +27,10 @@
         margin-right: 20px;
         color: opacidad($color-primario, .5);
     }
+
+    @include media(desktop-s){
+
+        max-width: 300px;
+        padding: 90px 20px 20px 20px;
+    }   
 }

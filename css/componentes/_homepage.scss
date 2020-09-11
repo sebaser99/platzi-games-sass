@@ -68,7 +68,7 @@
     width: 100%;
     justify-content: space-evenly;
     @include media(desktop-s){
-        max-width: 1000px;
+        max-width: 900px;
         height: 550px;
         margin-right: 20px;
     
@@ -87,8 +87,8 @@
 .caja--mediana{
     width: 100%;
     @include media(desktop-s){
-        width: 600px;
-        height: 250px;
+        width: 630px;
+        height: 275px;
         h2{
             padding-top:12px;
             @include titulos($fuente2);
