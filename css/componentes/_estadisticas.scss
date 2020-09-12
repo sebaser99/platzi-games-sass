@@ -45,13 +45,15 @@
 }
 
 .caja--con-fondo__stats{
+	width: 100%;
 	margin: 0 auto;
 	position: absolute;
-	bottom: 10px;
+	bottom:30px;
 	border-top: none;
-	text-align: center;
+	
 	ul{
 		display: flex;
+		justify-content: center;
 	}
 	li{
 		display: flex;
@@ -59,10 +61,11 @@
 		opacity: .8;
 	}
 	i{
-		color: $color-claro;
+		
+		color: $color-primario;
 	}
 	span{
-		color: $color-claro;
+		color: $color-primario;
 	}
 }
 

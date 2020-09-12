@@ -31,11 +31,11 @@
 }
 
 .caja--con-fondo{
+	max-width: 400px;
 	display: block;
 	box-shadow: none;
-	position: relative;
 	overflow-block: hidden;
-	background-color: $color-primario;
+	background-color: $color-claro;
 	img{
 		display: block;
 		margin: 0 auto;
@@ -43,15 +43,24 @@
 		max-height: auto;
 		opacity: .5;
 		object-fit: contain;
+		position: relative;
 	}
+
+	&__contenido{
+	
+		position: absolute;
+		
+	}
+	
 	@include media(desktop-s){
+		position: relative;
 		img{
 			position: absolute;
 		}
 		
 	
 		&__contenido{
-			padding: 20px;
+			padding: 10px;
 			position: absolute;
 			text-align: center;
 			color: $color-claro;
@@ -68,8 +77,7 @@
 			max-width: 100px;
 			margin: 0 auto;
 			text-align: center;
-			
-			color: $color-claro;
+			color: $color-secundario;
 			@include titulos($fuente2);
 		}
 	}

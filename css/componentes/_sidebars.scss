@@ -1,6 +1,13 @@
 .sidebar--listado{
-    margin: 0 auto;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 30px 5px 5px;
     @include caja();
+    @include media(desktop-s){
+        margin: 0;
+        max-width: 300px;
+        padding: 90px 20px 20px 20px;
+    }  
     h3{
         @include font-size(20px);
         @include titulos($fuente2);
@@ -28,9 +35,5 @@
         color: opacidad($color-primario, .5);
     }
 
-    @include media(desktop-s){
-
-        max-width: 300px;
-        padding: 90px 20px 20px 20px;
-    }   
+     
 }

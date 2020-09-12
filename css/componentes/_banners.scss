@@ -1,14 +1,19 @@
 .banner--homepage{
     background-color: $color-secundario;
     color: $color-claro;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+
     h3{
         margin: 20px 0;
-        @include font-size(20px);
+        @include font-size(15px);
         @include titulos($fuente2);
         text-align: center;
     }
     p{
         margin: 30px 0;
+        @include font-size(14px);
     }
     .button{
         margin: 0 auto;
@@ -16,7 +21,7 @@
         height: 50px;
         width: 100px;
         border: 2px solid $color-claro;
-        @include font-size(18px);
+        @include font-size(15px);
         @include titulos($fuente2);
     }
     a{
@@ -25,13 +30,41 @@
         text-align: center;
         
     }
-
     @include media(desktop-s){
-
-
+        padding: 10px;
+        padding-top: 30px;
+        margin: 30px 0;
         max-width: 300px;
-        padding: 50px;
-        margin: 20px 0;
+        background-color: $color-secundario;
+        color: $color-claro;
+        h3{
+            margin: 40px auto;
+            @include font-size(22px);
+            @include titulos($fuente2);
+            text-align: center;
+            background-color: $color-secundario;
+        }
+        p{
+           
+            margin: 30 auto;
+            @include font-size(16px);
+        }
+        .button{
+            margin: 30px auto;
+            padding: 10px;
+            height: 50px;
+            width: 120px;
+            border: 2px solid $color-claro;
+            @include font-size(20px);
+            @include titulos($fuente2);
+        }
+        a{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            
+        }
        
     }
+   
 }

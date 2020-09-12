@@ -65,15 +65,15 @@
 }
 
 .caja--grande{
-    width: 100%;
+    max-width: 400px;
     justify-content: space-evenly;
-    @include media(desktop-s){
-        max-width: 900px;
-        height: 550px;
-        margin-right: 20px;
     
+    @include media(desktop-s){
+        max-width: 950px;
+        height: auto;
+
         h2{
-            padding-top:15px;
+            padding-top:0;
             @include titulos($fuente2);
             @include font-size(50px);
         }
@@ -85,22 +85,22 @@
 }
 
 .caja--mediana{
-    width: 100%;
+    max-width: 400px;
     @include media(desktop-s){
-        width: 630px;
-        height: 275px;
+        max-width: 630px;
+        height: auto;
         h2{
-            padding-top:12px;
+            padding-top:10px;
             @include titulos($fuente2);
-            @include font-size(30px);
+            @include font-size(25px);
         }
     }
 }
 .caja--pequena{
-    width: 100%;
+    max-width: 400px;
     @include media(desktop-s){
         width: 300px;
-        height: 250px;
+        height: auto;
         h2{
             padding-top:8px;
             @include titulos($fuente2);

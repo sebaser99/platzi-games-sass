@@ -2,7 +2,7 @@
     display:flex;
     padding: 0 20px 20px 20px;
     margin: 0;
-    margin-top:10px;
+    margin-top:20px;
 	width: 100%;
     height: 160px;
     border-top: 1px solid #ebebeb;
@@ -11,7 +11,7 @@
 }
 
 .nav--footer ul{
-    display: flex;
+    display: none;
     padding-top: 35px;
     
 
@@ -24,19 +24,26 @@
         color: $color-claro;
 		@include titulos($fuente2);
     }
+    @include media(desktop-s){
+        display: flex;
+    }
 }
 
 .nav--social{
     margin-left: auto;
+    display: none;
+
     ul{
-        display: flex;
         padding-top: 35px ;
+        display: flex;
         
     }
     li{
-        list-style: none;
+        list-style: flex;
         margin-right: 50px;
         color: $color-claro;
+       
+        
     }
     span{
         color: $color-secundario;
@@ -44,5 +51,11 @@
     a{
         color: $color-claro;
         @include titulos($fuente2);
+    }
+    @include media(desktop-s){
+        display: flex;
+        li{
+            list-style: none;
+        }
     }
 } 
