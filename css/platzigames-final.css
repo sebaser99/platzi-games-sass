@@ -1710,10 +1710,11 @@ h1, h2, h3 {
     background-color: #8841da;
   }
   .banner--homepage p {
-    margin: 30 auto;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    width: 80%;
+    margin: 20px auto;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 1.59375rem;
   }
   .banner--homepage .button {
     margin: 30px auto;
@@ -1847,7 +1848,7 @@ h1, h2, h3 {
   position: relative;
 }
 .caja--grande h2 {
-  width: 360px;
+  width: inherit;
   padding-top: 0;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
@@ -1870,6 +1871,21 @@ h1, h2, h3 {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.3125rem;
+}
+.caja--grande .caja--con-fondo__stats {
+  width: auto;
+  position: absolute;
+  top: 300px;
+}
+.caja--grande .caja--con-fondo__stats i {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.caja--grande .caja--con-fondo__stats span {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
 }
 @media only screen and (min-width: 992px) {
   .caja--grande {
@@ -1903,10 +1919,59 @@ h1, h2, h3 {
     font-size: 1.125rem;
     line-height: 1.6875rem;
   }
+  .caja--grande .caja--con-fondo__stats {
+    position: absolute;
+    top: 500px;
+  }
+  .caja--grande .caja--con-fondo__stats i {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+  .caja--grande .caja--con-fondo__stats span {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
 }
 
 .caja--mediana {
   max-width: 400px;
+}
+.caja--mediana .caja__imagen {
+  position: relative;
+}
+.caja--mediana h2 {
+  width: inherit;
+  padding-top: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  position: absolute;
+  top: 410px;
+  color: #FFFFFF;
+}
+.caja--mediana .caja--con-fondo__categoria {
+  position: absolute;
+  top: 380px;
+}
+.caja--mediana .caja--con-fondo__stats {
+  width: auto;
+  position: absolute;
+  top: 720px;
+}
+.caja--mediana .caja--con-fondo__stats i {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.caja--mediana .caja--con-fondo__stats span {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
 }
 @media only screen and (min-width: 992px) {
   .caja--mediana {
@@ -1914,13 +1979,45 @@ h1, h2, h3 {
     height: auto;
   }
   .caja--mediana h2 {
-    padding-top: 10px;
+    width: auto;
+    padding-top: 0;
     font-family: "Oswald", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 25px;
     font-size: 1.5625rem;
     line-height: 2.34375rem;
+    position: static;
+  }
+  .caja--mediana .caja__imagen {
+    position: static;
+  }
+  .caja--mediana .caja--con--fondo__contenido {
+    padding-top: 200px;
+  }
+  .caja--mediana .caja--con-fondo__categoria {
+    position: static;
+  }
+  .caja--mediana p {
+    width: auto;
+    position: static;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+  .caja--mediana .caja--con-fondo__stats {
+    position: absolute;
+    top: 500px;
+  }
+  .caja--mediana .caja--con-fondo__stats i {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+  .caja--mediana .caja--con-fondo__stats span {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
   }
 }
 

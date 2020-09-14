@@ -70,7 +70,7 @@
         position: relative;
     }
     h2{
-        width: 360px;
+        width: inherit;
         padding-top:0;
         @include titulos($fuente2);
         @include font-size(18px);
@@ -89,16 +89,18 @@
         @include font-size(14px)
     }
 
-    // .caja--con-fondo__stats{
-    //     position: absolute;
+    .caja--con-fondo__stats{
+        width: auto;
+        position: absolute;
+        top: 300px;
       
-    //     i{
-    //         @include font-size(12px);
-    //     }
-    //     span{
-    //         @include font-size(12px);
-    //     };
-    // }
+        i{
+            @include font-size(12px);
+        }
+        span{
+            @include font-size(12px);
+        };
+    }
 
     
     
@@ -132,18 +134,17 @@
             position: static;
             @include font-size(18px)
         }
-        // .caja--con-fondo__stats{
-        //     position: static;
-        //     i{
-        //         @include font-size(18px);
-        //     }
-        //     span{
-        //         @include font-size(18px);
-        //     };
+        .caja--con-fondo__stats{
+            position: absolute;
+            top: 500px;
+            i{
+                @include font-size(18px);
+            }
+            span{
+                @include font-size(18px);
+            };
 
-           
-           
-        // }
+        }
             
         
        
@@ -154,13 +155,78 @@
 
 .caja--mediana{
     max-width: 400px;
+    .caja__imagen{
+        position: relative;
+    }
+    h2{
+        width: inherit;
+        padding-top:0;
+        @include titulos($fuente2);
+        @include font-size(18px);
+        position: absolute;
+        top: 410px;
+        color: $color-claro;
+    }
+    .caja--con-fondo__categoria{
+        position: absolute;
+        top: 380px
+    }
+  
+
+    .caja--con-fondo__stats{
+        width: auto;
+        position: absolute;
+        top: 720px;
+      
+        i{
+            @include font-size(12px);
+        }
+        span{
+            @include font-size(12px);
+        };
+    }
+    
     @include media(desktop-s){
         max-width: 630px;
         height: auto;
+        
         h2{
-            padding-top:10px;
+            width: auto;
+            padding-top:0;
             @include titulos($fuente2);
             @include font-size(25px);
+            position: static;
+           
+        }
+
+        .caja__imagen{
+            position: static;
+        }
+        
+        
+        .caja--con--fondo__contenido{
+            padding-top: 200px;
+        }
+
+        .caja--con-fondo__categoria{
+            position: static;
+           
+        }
+        p{
+            width: auto;
+            position: static;
+            @include font-size(18px)
+        }
+        .caja--con-fondo__stats{
+            position: absolute;
+            top: 500px;
+            i{
+                @include font-size(18px);
+            }
+            span{
+                @include font-size(18px);
+            };
+
         }
     }
 }
