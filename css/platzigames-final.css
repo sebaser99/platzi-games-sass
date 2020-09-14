@@ -1342,6 +1342,7 @@ h1, h2, h3 {
 }
 
 .caja--con-fondo {
+  margin: 0 auto;
   max-width: 400px;
   display: block;
   box-shadow: none;
@@ -1355,13 +1356,32 @@ h1, h2, h3 {
   max-height: auto;
   opacity: 0.5;
   object-fit: contain;
-  position: relative;
 }
 .caja--con-fondo__contenido {
-  position: absolute;
+  padding: 10px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.caja--con-fondo__contenido p {
+  color: #FFFFFF;
+}
+.caja--con-fondo__contenido h3 {
+  color: #FFFFFF;
+}
+.caja--con-fondo__categoria {
+  display: block;
+  width: auto;
+  max-width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  color: #8841da;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 992px) {
   .caja--con-fondo {
+    margin: 0;
     position: relative;
   }
   .caja--con-fondo img {
@@ -1822,14 +1842,48 @@ h1, h2, h3 {
 
 .caja--grande {
   max-width: 400px;
-  justify-content: space-evenly;
+}
+.caja--grande .caja__imagen {
+  position: relative;
+}
+.caja--grande h2 {
+  width: 360px;
+  padding-top: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  position: absolute;
+  top: 150px;
+  color: #FFFFFF;
+}
+.caja--grande .caja--con-fondo__categoria {
+  position: absolute;
+  top: 120px;
+}
+.caja--grande p {
+  width: 360px;
+  position: absolute;
+  top: 220px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
 }
 @media only screen and (min-width: 992px) {
   .caja--grande {
     max-width: 950px;
     height: auto;
   }
+  .caja--grande .caja__imagen {
+    position: static;
+  }
+  .caja--grande .caja--con--fondo__contenido {
+    padding-top: 200px;
+  }
   .caja--grande h2 {
+    width: auto;
     padding-top: 0;
     font-family: "Oswald", sans-serif;
     font-weight: 600;
@@ -1837,9 +1891,17 @@ h1, h2, h3 {
     font-size: 50px;
     font-size: 3.125rem;
     line-height: 4.6875rem;
+    position: static;
   }
-  .caja--grande .caja--con--fondo__contenido {
-    padding-top: 200px;
+  .caja--grande .caja--con-fondo__categoria {
+    position: static;
+  }
+  .caja--grande p {
+    width: auto;
+    position: static;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
   }
 }
 
