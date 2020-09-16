@@ -1,6 +1,7 @@
 .sidebar--listado{
     max-width: 400px;
     margin: 20px auto;
+    margin-top: 0;
     padding: 30px 5px 5px;
     @include caja();
     @include media(desktop-s){

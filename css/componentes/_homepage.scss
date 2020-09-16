@@ -65,34 +65,43 @@
 }
 
 .caja--grande{
+    position: relative;
     max-width: 400px;
-    .caja__imagen{
-        position: relative;
+    img{
+        border-radius: 10px;
     }
+      
+
     h2{
-        width: inherit;
+        width: inherit; 
         padding-top:0;
+        margin: 0 auto;
         @include titulos($fuente2);
         @include font-size(18px);
         position: absolute;
-        top: 150px;
+        top: 45px ;
+        left: 14.55px;
         color: $color-claro;
     }
     .caja--con-fondo__categoria{
+        width: 100%;
         position: absolute;
-        top: 120px
+        top: 15px;
+        left: 150px;
+        
     }
     p{
         width: 360px;
         position: absolute;
-        top: 220px;
+        top: 100px;
+        left: 20px;
         @include font-size(14px)
     }
 
     .caja--con-fondo__stats{
-        width: auto;
         position: absolute;
-        top: 300px;
+        width: 100%;
+        top: 200px;
       
         i{
             @include font-size(12px);
@@ -108,15 +117,12 @@
         max-width: 950px;
         height: auto;
 
-        .caja__imagen{
-            position: static;
+        img{
+            height: auto;
         }
-        
-        
-        .caja--con--fondo__contenido{
-            padding-top: 200px;
+        .caja--con-fondo__contenido{
+            padding: 0;
         }
-
         h2{
             width: auto;
             padding-top:0;
@@ -126,6 +132,7 @@
            
         }
         .caja--con-fondo__categoria{
+            margin-top: 30px;
             position: static;
            
         }
@@ -137,6 +144,8 @@
         .caja--con-fondo__stats{
             position: absolute;
             top: 500px;
+            width: 100%;
+            
             i{
                 @include font-size(18px);
             }
@@ -155,8 +164,10 @@
 
 .caja--mediana{
     max-width: 400px;
-    .caja__imagen{
-        position: relative;
+    position: relative;
+    img{
+        border-radius: 10px;
+        
     }
     h2{
         width: inherit;
@@ -164,19 +175,21 @@
         @include titulos($fuente2);
         @include font-size(18px);
         position: absolute;
-        top: 410px;
+        top: 30px;
         color: $color-claro;
+        left: 0;
     }
     .caja--con-fondo__categoria{
         position: absolute;
-        top: 380px
+        top: 10px;
+        left: 172.77px
+       
     }
-  
-
+    
     .caja--con-fondo__stats{
-        width: auto;
+        width: 100%;
         position: absolute;
-        top: 720px;
+        top: 140px;
       
         i{
             @include font-size(12px);
@@ -189,6 +202,7 @@
     @include media(desktop-s){
         max-width: 630px;
         height: auto;
+        position: relative;
         
         h2{
             width: auto;
@@ -209,17 +223,15 @@
         }
 
         .caja--con-fondo__categoria{
+            margin-top: 20px;
             position: static;
            
         }
-        p{
-            width: auto;
-            position: static;
-            @include font-size(18px)
-        }
+
         .caja--con-fondo__stats{
             position: absolute;
-            top: 500px;
+            top: 220px;
+            width: 100%;
             i{
                 @include font-size(18px);
             }
@@ -232,13 +244,81 @@
 }
 .caja--pequena{
     max-width: 400px;
+    position: relative;
+    img{
+        border-radius: 10px;
+        
+    }
+    h2{
+        width: inherit;
+        padding-top:0;
+        @include titulos($fuente2);
+        @include font-size(18px);
+        position: absolute;
+        top: 100px;
+        left: 56.14px;
+        color: $color-claro;
+    }
+    .caja--con-fondo__categoria{
+        position: absolute;
+        top: 60px;
+        left: 186px;
+    }
+   
+    .caja--con-fondo__stats{
+        width: 100%;
+        position: absolute;
+        top: 320px;
+      
+        i{
+            @include font-size(12px);
+        }
+        span{
+            @include font-size(12px);
+        };
+    }
+    
     @include media(desktop-s){
-        width: 300px;
+        max-width: 300px;
         height: auto;
+        position: relative;
+        
         h2{
-            padding-top:8px;
+            padding-top: 8px;
+            width: auto;
+            padding-top:0;
             @include titulos($fuente2);
             @include font-size(20px);
+            position: static;
+           
+        }
+
+        .caja__imagen{
+            position: static;
+        }
+        
+        
+        .caja--con--fondo__contenido{
+            padding-top: 200px;
+        }
+
+        .caja--con-fondo__categoria{
+            margin-top: 20px;
+            position: static;
+           
+        }
+       
+        .caja--con-fondo__stats{
+            position: absolute;
+            top: 250px;
+            width: 100%;
+            i{
+                @include font-size(18px);
+            }
+            span{
+                @include font-size(18px);
+            };
+
         }
     }
 }
