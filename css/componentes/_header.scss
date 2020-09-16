@@ -6,6 +6,7 @@
 	height: 90px;
 	border-bottom: 1px solid #ebebeb;
 	justify-content: space-between;
+	position: relative;
 	
 }	
 .nav--header ul{
@@ -58,4 +59,51 @@
 	@include media(desktop-s){
 		display: none;
 	}
+}
+
+.is-active{
+	display:block;
+	border: 1px solid black;
+	position: absolute;
+	top: 80px;
+	right: 10px;
+
+	li{
+		list-style: none;
+		
+	}
+	a{
+		text-decoration: none;
+		color: $color-variacion;
+		@include titulos($fuente2);
+	}
+	@include media(desktop-s){
+		display: flex;
+	}
+}
+
+.is-active-busqueda{
+	display: block;
+	margin-left: auto;
+	padding-top: 35px;
+	text-decoration: none;
+	position: absolute;
+	top: 190px;
+	right: 10px;
+	text-align: center;
+
+	i{
+		font-size: 20px;
+		margin-right: 10px;
+		color: $color-secundario;
+	}
+	span{
+		color: $color-variacion;
+		@include titulos($fuente2);
+	
+	}
+	@include media(desktop-s){
+		display: flex;
+	}
+
 }
